@@ -4,14 +4,20 @@ const router = express.Router();
 //RETORNA TODOS OS PRODUTOS
 router.get('/', (req, res, next)=> {
   res.status(200).send({   // 200 OK
-    mensagem: 'Retorna todos os pedidos'
+    mensagem: 'Retorna todos os produtos'
   })
 });
 
 // INSERE UM PRODUTO
 router.post('/', (req, res, next)=> {
+  const produto = {
+    nome: req.body.nome,
+    preco: req.body.preco
+  }
+
   res.status(201).send({     // 201 = created
-    mensagem: 'Insere um produto'
+    mensagem: 'Insere um produto',
+    produtoCriado: produto
   })
 });
 
