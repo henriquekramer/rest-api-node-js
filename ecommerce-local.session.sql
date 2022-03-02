@@ -1,2 +1,1 @@
-select *
-from produtos;
+describe pedidos;
