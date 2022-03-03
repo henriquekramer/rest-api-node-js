@@ -1,1 +1,2 @@
-describe pedidos;
+alter table usuarios
+ADD UNIQUE (email);
