@@ -3,7 +3,7 @@ const mysql = require('../mysql');
 exports.getProdutos = async (req, res, next) => {
   try {
     const result = await mysql.execute("SELECT * FROM produtos;")
-  const response = {
+    const response = {
     quantidade: result.length,
     produtos: result.map(prod =>{
       return {
